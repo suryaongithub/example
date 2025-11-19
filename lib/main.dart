@@ -19,17 +19,20 @@ class MyApp extends StatelessWidget {
 class ExampleHomepage extends StatelessWidget {
   ExampleHomepage({super.key});
 
-  final GCColorSchema colorSchema = GCColorSchema();
+  final GCColorSchema colorSchema =
+      GCColorSchema(shadowColor: const Color.fromRGBO(211, 78, 78, 1));
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-        child: GCCard(
-      colorScheme: colorSchema,
-      functionPressed: () {},
-      height: 350,
-      width: 125,
-      child: const Placeholder(),
-    ));
+    return Scaffold(
+        backgroundColor: const Color.fromRGBO(249, 231, 178, 1),
+        body: Center(
+            child: GCCard(
+          colorScheme: colorSchema,
+          functionPressed: () {},
+          height: 350,
+          width: 125,
+          child: const Placeholder(),
+        )));
   }
 }
